@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>Web222 Assignment 1 / 2</title>
+            <link rel="stylesheet" href="css/style.css" />
+            <link rel="stylesheet" href="css/login.css" />
+            <link rel="stylesheet" href="css/tinySearch.css" />
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  </head>
+  <body>
+    
+    {{> title }}
+    {{> tinySearch }}
+    {{#each listings}}{{listings.title}}{{/each}}
+    <div id="featuredBar">Search Results</div>
+    <div class="featured">
+    {{#each listings}}
+      <script>var rate="{{pricepernight}}";</script>
+      <div id="featured1">
+        <img src="{{photoloc}}">
+        <span id="featured1Title">{{title}}</span>
+        {{description}}
+        <span id="featured1City">Location: {{location}}</span>
+        <span id="featured1Rate">Rate: {{pricepernight}}</span>
+        <form action="/bookListing" method="POST">
+          <input type="hidden" name="listingID" value="{{_id}}">
+          <button id="bookingButton" type="submit">View listing</button>
+        </form>
+      </div>
+    {{/each}}
+    </div>
+    {{> footer }}
+    <script src="js/script.js"></script>
+    <script src="listings/listings.js"></script>
+    <script src="js/validateSignIn.js"></script>
+    <script src="js/book.js"></script>
+  </body>
+</html>

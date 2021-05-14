@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="css/style.css" />
+{{#each listings}}{{listings.title}}{{/each}}
+    <div id="featuredBar">FEATURED LISTINGS</div>
+    <div class="featured">
+    {{#each listings}}
+      <div id="featured1">
+        <img src="{{photoloc}}">
+        <span id="featured1Title">{{title}}</span>
+        {{description}}
+        <span id="featured1City">{{location}}</span>
+        <span id="featured1Rate">Rate: ${{pricepernight}} per night</span>
+        <form action="/bookListing" method="POST">
+          <input type="hidden" name="listingID" value="{{_id}}">
+          <button id="bookingButton" type="submit">View listing</button>
+        </form>
+      </div>
+    {{/each}}
+    </div>

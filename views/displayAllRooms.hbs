@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>Web222 Assignment 1 / 2</title>
+            <link rel="stylesheet" href="css/style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  </head>
+  <body>
+    {{> titleUser }}
+    {{#if user.admin}}
+      <div id="whitespace"><span id="admintitle">Administrator Dashboard</span></div>
+    {{/if}}
+    <div id="ListingDiv">
+      <form method=POST action="/deleteListing">
+        <span>Delete listing: </span>
+        <input type="text" name="id" placeholder="ID-Number">
+        <button type="submit" id="submitLogin" class="formInput">Submit</button>
+      </form>
+    </div>
+    <div id="ListingDiv">
+      <form method=POST action="/viewListing">
+        <span>Edit listing: </span>
+        <input type="text" name="id" placeholder="ID-Number">
+        <button type="submit" id="submitLogin" class="formInput">Submit</button>
+      </form>
+    </div>
+    {{>allListings}}
+    {{> footer }}
+    <script src="js/script.js"></script>
+    <script src="listings/listings.js"></script>
+    <script src="js/validateSignIn.js"></script>
+  </body>
+</html>

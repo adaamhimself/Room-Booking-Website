@@ -1,0 +1,29 @@
+#dashSearch {
+    background: white;
+    margin: 2%;
+    display: block;
+    padding: 1%;
+}
+#dashSearch label {
+    display: block;
+    margin-left: 5%;
+}
+#dashSearch input {
+    display: block;
+    margin-left: 5%;
+    margin-bottom: 1%;
+}
+#dashSearch select {
+    margin-left: 5%;
+    margin-bottom: 1%;
+}
+#dashSearch button {
+    display: block;
+    margin-left: 5%;
+}
+#dashcheckInInput {
+    width: 25%;
+}
+#dashcheckOutInput {
+    width: 25%;
+}

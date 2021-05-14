@@ -1,0 +1,27 @@
+<div id="featuredBar">SEARCH</div>
+<div id="tinySearch" class="tinySearchDiv">
+  <form action="/searchResults" method="POST" class="tinySearchForm">
+      <label id="whereLabel" class="tinySearchForm" for="searchWhere">WHERE</label>
+      <select name="searchWhere" class="tinySearchForm">
+        <option value="Toronto">Toronto</option>
+        <option value="Montreal">Montreal</option>
+        <option value="Winnipeg">Winnipeg</option>
+        <option value="Vancouver">Vancouver</option>
+      </select>
+      <div id=checkInOut>
+        <label for="checkInInput" class="tinySearchForm">CHECK IN</label>
+        <input type="date" id="check" name="checkInInput" placeholder="dd-mm-yyyy" class="tinySearchForm">
+        <label for="checkOInput" class="tinySearchForm">CHECK OUT</label>
+        <input type="date" id="check" name="checkOutInput" placeholder="dd-mm-yyyy" class="tinySearchForm">     
+      </div>
+      <label id="guestLabel" for="guests" class="tinySearchForm">GUESTS</label>
+      <select name="guests" id="guests" class="tinySearchForm">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <button type="submit" id="submitButton2" class="tinySearchForm">Search</button>
+  </form>
+</div>

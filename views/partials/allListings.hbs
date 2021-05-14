@@ -1,0 +1,14 @@
+{{#each listall}}{{listAll.title}}{{/each}}
+<div id="featuredBar">ALL LISTINGS</div>
+  <div class="featured">
+  {{#each listAll}}
+    <div id="featured1">
+      <img src="{{photoloc}}">
+      <span id="featured1Title">{{title}}</span>
+      {{description}}
+      <span id="featured1City">{{location}}</span>
+      <span id="featured1Rate">Rate: ${{pricepernight}} per night</span>
+	    <span id="listingID">ID: {{_id}}</span>
+    </div>
+  {{/each}}
+  </div>

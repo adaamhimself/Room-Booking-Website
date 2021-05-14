@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>Web222 Assignment 1 / 2</title>
+            <link rel="stylesheet" href="css/style.css" />
+            <link rel="stylesheet" href="css/login.css" />
+            <link rel="stylesheet" href="css/tinySearch.css" />
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  </head>
+  <body>
+    {{> titleUser }}
+    {{#if user.admin}}
+      <div id="whitespace"><span id="admintitle">Administrator Dashboard</span></div>
+      {{> createListing }}
+      {{> createUser }}
+    {{/if}}
+    {{> featured}}
+    {{> tinySearch}}
+    {{> footer }}
+    <script src="js/script.js"></script>
+    <script src="listings/listings.js"></script>
+    <script src="js/validateSignIn.js"></script>
+  </body>
+</html>

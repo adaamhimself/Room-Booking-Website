@@ -1,0 +1,282 @@
+body {
+    background: #eff0eb;
+    margin: auto;
+    position: relative;
+    background-color: #5e6e8c;
+    font-family: Roboto Condensed;
+}
+#title {
+    padding: 0;
+    display: block;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+#whitespace {
+    width: 100%;
+    height: 50%;
+    background: white;
+    position: relative;
+}
+#whitespace a {
+    text-decoration: none;
+    color: black;
+}
+#login {
+    position: absolute;
+    right: 1%;
+    color: black;
+    height: 100%;
+}
+#welcome {
+    position: absolute;
+    top: 15%;
+    left: 4%;
+    color: #4e6180;
+    font-family: Fredoka One;
+    font-size: 300%;
+}
+#mainSearch {
+    display: grid;
+    position: absolute;
+    top: 20%;
+    left: 4%;
+    border: 1px solid black;
+    border-radius: 1px;
+    box-shadow: 5px 10px 8px #888888;
+    padding: 1%;
+    background: white;
+    font-family: Roboto Condensed;
+    font-size: 80%;
+    width: 19%;
+}
+#whereLabel {
+    margin-bottom: 1%;
+}
+#locationInput {
+    width: 95.5%;
+}
+#checkInOut {
+    margin-top: 4%;
+    margin-bottom: 3%;
+}
+#checkInInput {
+    display: block;
+    width: 65%;
+}
+#checkOutInput {
+    display: block;
+    width: 65%;
+}
+#guestLabel {
+    margin-bottom: 1%;
+}
+#guests {
+    margin-bottom: 6%;
+}
+#submitButton {
+    background-color:  #4e6180;
+    color: white;
+    border: none;
+}
+#featuredBar {
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
+.featured {
+    background-color: #5e6e8c;
+    margin-top: 0.5%;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#featured1 {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 1px;
+    max-width: 110%;
+    margin-left: 2%;
+    margin-right: 2%;
+    box-shadow: 2.5px 4px 4px black;
+    margin: 1%;
+}
+#featured1 img {
+    max-height: 100%;
+    max-width: 100%;
+}
+#featured1 span {
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#featured1Title {
+    font-size: 125%;
+}
+footer {
+    background-color: #5e6e8c;
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+#resultsTitle {
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
+#results {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    margin-left: 10%;
+    margin-right: auto;
+}
+#listing {
+    background: white;
+    border: 1px solid black;
+    border-radius: 1px;
+    display: grid;
+    margin: 1%;
+}
+#listing img{
+    max-width: 90%;
+    max-height: 90%;
+}
+.form {
+    background: white;
+    margin: 5%;
+    padding: 1%;
+    display: block;
+}
+.formInput {
+    display: block;
+    width: 46%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+}
+.formInput input {
+    display: block;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+}
+.formInput label {
+    display: block;
+    width: 46%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5%;
+}
+#submitRegistration {
+    margin-top: 2%;
+    display: block;
+    width: 46%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:  #4e6180;
+    color: white;
+    border: none;
+}
+#signInMessage {
+    width: 21.5%;
+}
+#submitLogin {
+    margin-top: 2%;
+    display: block;
+    width: 46%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:  #4e6180;
+    color: white;
+    border: none;
+}
+#whitespaceRegister {
+    width: 100%;
+    height: 2%;
+    background: white;
+    position: relative;
+}
+#signInDiv {
+    display: none;
+}
+#whyTitle {
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    font-weight: bolder;
+}
+#whyParagraph {
+    display: block;
+    background: white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+    text-align: center;
+}
+#travelphoto {
+    display: block;
+    max-width: 55%;
+    max-height: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+#checkbox {
+    display: inline-block;
+    margin: 0%;
+    width: 10%;
+}
+#listcheckbox {
+    display: inline-block;
+    margin-left: 27%;
+    padding: 0%;
+    width: 10%;
+}
+#admintitle {
+    background: white;
+}
+#ListingDiv {
+    background: white;
+    display: inline-block;
+    padding: 1%;
+    margin: 1%;
+    width: 93%;
+    margin-left: 2%;
+    margin-right: auto;
+}
+#ListingDiv label {
+    display: inline-block;
+}
+#ListingDiv button {
+    display: inline-block;
+    width: 8%;
+    padding: 0.25%;
+}
+#bookingButton {
+    background: none;
+    border: none;
+    color: black;
+    font-family: Roboto Condensed;
+    font-size: 100%;
+    margin-left: 0%;
+    margin-bottom: 1%;
+    padding: 0%;
+    text-decoration: underline;
+}

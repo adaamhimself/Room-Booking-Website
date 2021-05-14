@@ -1,0 +1,23 @@
+#tinySearch {
+    background: white;
+    margin: 1%;
+    padding: 1%;
+    display: block;
+}
+.tinySearchForm {
+    margin: 0%;
+    display: inline-block;
+}
+#check {
+    width: 120%
+}
+#tinySearch label {
+    display: block;
+}
+#submitButton2 {
+    background-color:  #4e6180;
+    color: white;
+    border: none;
+    width: 125%;
+    height: 120%;
+}

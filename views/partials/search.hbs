@@ -1,0 +1,28 @@
+<div id=mainimg>
+      <img id=title src="./img/toronto.jpg" alt:"toronto" draggable="false">
+    </div>
+    <span id=welcome>Where would you like to go?</span>
+    <form id="mainSearch" action="/searchResults" method="POST">
+      <label id="whereLabel" for="searchWhere">WHERE</label>
+      <select name="searchWhere" id="searchWhere">
+        <option value="Toronto">Toronto</option>
+        <option value="Montreal">Montreal</option>
+        <option value="Winnipeg">Winnipeg</option>
+        <option value="Vancouver">Vancouver</option>
+      </select>
+      <div id=checkInOut>
+        <label for="checkInInput">CHECK IN</label>
+        <input type="date" id="checkInInput" name="checkInInput" placeholder="dd-mm-yyyy">
+        <label for="checkOInput">CHECK OUT</label>
+        <input type="date" id="checkOutInput" name="checkOutInput" placeholder="dd-mm-yyyy">     
+      </div>
+      <label id="guestLabel" for="guests">GUESTS</label>
+      <select name="guests" id="guests">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <button type="submit" id="submitButton">Search</button>
+    </form>

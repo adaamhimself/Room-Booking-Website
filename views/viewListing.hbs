@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>Web222 Assignment 1 / 2</title>
+            <link rel="stylesheet" href="css/style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  </head>
+  <body>
+    {{> titleUser }}
+    {{#if user.admin}}
+      <div id="whitespace"><span id="admintitle">Administrator Dashboard</span></div>
+    {{/if}}
+    {{#each listing}}{{listing.title}}{{/each}}
+    <div id="featuredBar">LISTING</div>
+    <div class="form">
+    {{#each listing}}
+      <div id="featured1">
+        <img src="{{photoloc}}">
+        <span id="featured1Title">{{title}}</span>
+        {{description}}
+        <span id="featured1City">{{location}}</span>
+        <span id="featured1Rate">{{pricepernight}}</span>
+      </div>
+          <div>
+      <form method="POST" action="/changeTitle">
+        <label for="changeTitle">Change Title:</label>
+        <input type="text" name="changeTitle" placeholder="Title">
+        <input type="hidden" name="listingID" value="{{_id}}">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div>
+      <form method="POST" action="/changeDescription">
+        <label for="changeDescription">Change Description:</label>
+        <input type="textbox" name="changeDrescription" placeholder="Description">
+        <input type="hidden" name="listingID" value="{{_id}}">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div>
+      <form method="POST" action="/changeLocation">
+        <label for="changeLocation">Change Location:</label>
+        <input type="textbox" name="changeLocation" placeholder="Location">
+        <input type="hidden" name="listingID" value="{{_id}}">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div>
+      <form method="POST" action="/changeRate">
+        <label for="changeRate">Change Rate:</label>
+        <input type="textbox" name="changeRate" placeholder="Rate">
+        <input type="hidden" name="listingID" value="{{_id}}">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    {{/each}}
+    </div>
+    <span><a href="/dashboard">Home</a></span>
+    {{> footer }}
+    <script src="js/script.js"></script>
+    <script src="listings/listings.js"></script>
+    <script src="js/validateSignIn.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>Web222 Assignment 1 / 2</title>
+            <link rel="stylesheet" href="css/style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  </head>
+  <body>
+    <div id="whitespace">
+      <a href="/">ODYSSEUS</a>
+      <a href="/signIn" id="login">SIGN IN</a>
+    </div>
+        <div id="signIn" class="form">
+        <span class="formInput" id="signInMessage">Sign in</span>
+        <form class="formInput" id="signInForm" action="/login" method="POST">
+            <input class="formInput" id="signInUsernameID" name="signInEmail" type="text" placeholder="E-mail">
+            <input class="formInput" id="signInPasswordID" name="signInPassword" type="password" placeholder="Password">
+        <button class="formInput" type="submit" id="submitLogin">Submit</button>
+        {{#if error}}
+        <span id="error">Sorry, you entered an incorrect email or password</span>
+        {{/if}}
+        </form>
+    </div>
+    {{> register }}
+    {{{body}}}
+    <script src="js/script.js"></script>
+    <script src="js/validateSignIn.js"></script>
+  </body>
+</html>

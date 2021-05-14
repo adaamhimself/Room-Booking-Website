@@ -1,0 +1,8 @@
+<div id="whitespace">
+    <a href="/">ODYSSEUS</a>
+    {{#if user.fullname}}
+        <a href="/dashboard" id="login">Welcome {{user.fullname}}
+    {{else}}
+        <a href="/signIn" id="login">SIGN IN</a>
+    {{/if}}
+</div>

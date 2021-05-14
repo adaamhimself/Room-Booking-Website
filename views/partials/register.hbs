@@ -1,0 +1,13 @@
+   
+    <div id="registerUser" class="form">
+        <span id="registerMessage" class="formInput">Please complete the form to register an account with us</span>
+        <form id="registerForm" method="POST" action="/addUser">
+            <input class="formInput" type="text" name="email" placeholder="E-mail address">        
+            <input class="formInput" type="text" name="fullname" id="registerFullName" placeholder="Full Name">
+            <input class="formInput" type="password" name="password" id="registerPassword" placeholder="Create a password">
+            <label for="birthdate" class="formInput">Please enter your date of birth</label>
+            <input class="formInput" name="birthdate" type="date">
+            <span id="adminform" class="formInput"><input id="admin" type="checkbox" name="admin">Admin? </span>
+            <button class="formInput" type="submit" id="submitRegistration">Submit</button>
+        </form>
+    </div>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>Web222 Assignment 1 / 2</title>
+            <link rel="stylesheet" href="css/style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  </head>
+  <body>
+    {{> titleUser }}
+    {{#if user.admin}}
+      <div id="whitespace"><span id="admintitle">Administrator Dashboard</span></div>
+    {{/if}}
+    {{#each listing}}{{listing.title}}{{/each}}
+    <div id="featuredBar">LISTING</div>
+    <div class="form">
+    {{#each listing}}
+      <div id="featured1">
+        <img src="{{photoloc}}">
+        <span id="featured1Title">{{title}}</span>
+        {{description}}
+        <span id="featured1City">Location: {{location}}</span>
+        <span id="featured1Rate">Rate: $<span id="ppn">{{pricepernight}}</span> per night</span>
+        <label for="checkInInput" class="tinySearchForm">Check in date: </label>
+        <input type="date" id="checkIn" name="checkInInput" placeholder="dd-mm-yyyy" class="tinySearchForm" form="bookingForm">
+        <label for="checkOInput" class="tinySearchForm">Check out date: </label>
+        <input type="date" id="checkOut" name="checkOutInput" placeholder="dd-mm-yyyy" class="tinySearchForm" form="bookingForm">
+        <label for="guests">Number of guests: </label>
+        <select name="guests" id="guests" class="tinySearchForm">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <span>Days: <span id="days"></span></span>
+      <span>Total price: </span><span id="total"></span>
+      <span id="submitBooking">Book</span>
+      <form id="bookingForm" action="/submitBooking" method="POST">
+        <input type="hidden" name="listingID" value="{{_id}}">
+        <input type="hidden" name="userEmail" value="{{user.email}}">
+        <input type="hidden" id="daysBooked" name="daysBooked" value="" >
+        <input type="hidden" id="totalPrice" name="totalPrice" value="" >
+        <button type="submit">Book</button>
+      </form>
+      </div>
+
+    {{/each}}
+    </div>
+    {{> footer }}
+    <script src="js/script.js"></script>
+    <script src="js/book.js"></script>
+  </body>
+</html>

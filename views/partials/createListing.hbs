@@ -1,0 +1,18 @@
+<div id="registerNewListing" class="form">
+  <span id="registerMessage" class="formInput">Create New Listing</span>
+  <form id="createListing" method="POST" action="/addListing" enctype="multipart/form-data">
+    <label for="roomTitle" class="formInput">Title</label>
+    <input type="text" class="formInput" name="roomTitle">
+    <label for="roomDescription" class="formInput">Description</label>
+    <input type="textbox" class="formInput" name="roomDescription">
+    <label for="roomPPN" class="formInput">Price per night</label>
+    <input type="text" class="formInput" name="roomPPN">
+    <label for="roomLocation" class="formInput">Location</label>
+    <input type="text" class="formInput" name="roomLocation">
+    <label for="photo" class="formInput">Attach photo</label>
+    <input type="file" class="formInput" name="photo">
+    <label for="featured" class="formInput" id="listcheckbox">Featured?</label>
+    <input type="checkbox" class="formInput" name="featured" id="checkbox">
+    <button class="formInput" type="submit" id="submitRegistration">Submit</button>
+  </form>
+</div>
